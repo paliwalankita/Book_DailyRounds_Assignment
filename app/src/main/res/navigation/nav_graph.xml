@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/signUpFragment">
+
+    <fragment
+        android:id="@+id/dataListFragment"
+        android:name="com.example.dailyrounds.ui.book.DataListFragment"
+        android:label="Book App"
+        tools:layout="@layout/fragment_data_list" >
+        <action
+            android:id="@+id/action_dataListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.dailyrounds.ui.book.DetailFragment"
+        android:label="Book Detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="Sample"
+            app:argType="com.example.dailyrounds.model.Samples" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.dailyrounds.ui.user.LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dataListFragment"
+            app:destination="@id/dataListFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.dailyrounds.ui.user.SignUpFragment"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_dataListFragment"
+            app:destination="@id/dataListFragment" />
+    </fragment>
+</navigation>

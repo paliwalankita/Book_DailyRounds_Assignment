@@ -1,0 +1,10 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape -->
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#EFEFEF" /> <!-- Background color -->
+            <corners android:radius="8dp" /> <!-- Rounded corners, adjust as needed -->
+        </shape>
+    </item>
+    <!-- Add any other layers or drawables here (e.g., borders, gradients, etc.) -->
+</layer-list>
